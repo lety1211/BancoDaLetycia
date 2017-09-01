@@ -32,8 +32,11 @@ public class LeBanc extends javax.swing.JFrame {
     private void initComponents() {
 
         jBtCriarConta = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        jBtEntrar = new javax.swing.JButton();
+        jLabelmagem = new javax.swing.JLabel();
+        jMenuInformações = new javax.swing.JMenuBar();
+        jMenuObanco = new javax.swing.JMenu();
+        jMenuTiposDeConta = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -44,42 +47,50 @@ public class LeBanc extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setText("Saldo: ");
+        jBtEntrar.setText("Entrar");
 
-        jLabel2.setText("jLabel2");
+        jLabelmagem.setText("Imagem");
+
+        jMenuObanco.setText("Conhecer");
+        jMenuInformações.add(jMenuObanco);
+
+        jMenuTiposDeConta.setText("Tipos de Conta");
+        jMenuInformações.add(jMenuTiposDeConta);
+
+        setJMenuBar(jMenuInformações);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(165, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jBtCriarConta)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel2)))
-                .addGap(148, 148, 148))
+                .addComponent(jBtEntrar, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jBtCriarConta))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(178, 178, 178)
+                .addComponent(jLabelmagem)
+                .addContainerGap(194, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(114, Short.MAX_VALUE)
+                .addContainerGap(57, Short.MAX_VALUE)
+                .addComponent(jLabelmagem)
+                .addGap(157, 157, 157)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel2))
-                .addGap(18, 18, 18)
-                .addComponent(jBtCriarConta)
-                .addGap(131, 131, 131))
+                    .addComponent(jBtCriarConta)
+                    .addComponent(jBtEntrar))
+                .addGap(30, 30, 30))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBtCriarContaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtCriarContaActionPerformed
-        // TODO add your handling code here:
-        this.conta = new Conta();
+        // ele tem que abrir a aba escolher tipo de conta
+        EscolherTipoConta EscolherTipoConta = new EscolherTipoConta();
+               
     }//GEN-LAST:event_jBtCriarContaActionPerformed
 
     /**
@@ -119,7 +130,10 @@ public class LeBanc extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jBtCriarConta;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JButton jBtEntrar;
+    private javax.swing.JLabel jLabelmagem;
+    private javax.swing.JMenuBar jMenuInformações;
+    private javax.swing.JMenu jMenuObanco;
+    private javax.swing.JMenu jMenuTiposDeConta;
     // End of variables declaration//GEN-END:variables
 }
