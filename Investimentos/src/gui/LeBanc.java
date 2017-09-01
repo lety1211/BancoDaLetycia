@@ -5,6 +5,8 @@
  */
 package gui;
 
+import investimentos.Conta;
+
 /**
  *
  * @author luizc
@@ -17,6 +19,8 @@ public class LeBanc extends javax.swing.JFrame {
     public LeBanc() {
         initComponents();
     }
+    
+    private Conta conta;
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -27,21 +31,56 @@ public class LeBanc extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jBtCriarConta = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jBtCriarConta.setText("Criar Conta");
+        jBtCriarConta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtCriarContaActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setText("Saldo: ");
+
+        jLabel2.setText("jLabel2");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(165, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jBtCriarConta)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel2)))
+                .addGap(148, 148, 148))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(114, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel2))
+                .addGap(18, 18, 18)
+                .addComponent(jBtCriarConta)
+                .addGap(131, 131, 131))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jBtCriarContaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtCriarContaActionPerformed
+        // TODO add your handling code here:
+        this.conta = new Conta();
+    }//GEN-LAST:event_jBtCriarContaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,5 +118,8 @@ public class LeBanc extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jBtCriarConta;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }
