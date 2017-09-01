@@ -10,10 +10,7 @@ package investimentos;
  * @author aluno
  */
 public class Conta {
-       private int sacar;
-    private float Limite;
-    private float Saldo;
-
+    
     /**
      * @return the numero
      */
@@ -76,7 +73,7 @@ public class Conta {
         return saldo;
     }
     public boolean sacar(float valor) {
-        float saque = Limite+Saldo;
+        float saque = this.limite+this.saldo;
         if(valor > saque){
             System.out.println("O saque não foi aprovado");
             return false;
@@ -89,7 +86,7 @@ public class Conta {
     }
     private int numero;
     private char agencia;
-    private float saldo;
+    protected float saldo;
     protected float limite;
 }
 

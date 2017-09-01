@@ -15,6 +15,9 @@ public class ContaMaster extends Conta {
     }
     
     private float limiteExtra, saldoInvestimento;
+    public float getSaldoInvestimento() {
+        return this.saldoInvestimento;
+    }
     public boolean sacar (float valor){
         if (this.getSaldo()+this.limite+this.limiteExtra>=valor){
             super.sacar(valor);
@@ -31,8 +34,8 @@ public class ContaMaster extends Conta {
         return this.limite+this.limiteExtra;
     }
     public boolean investir (float valor){
-        if (this.getSaldo()>= valor){
-            super.sacar (valor);
+        if (this.saldo >= valor){
+            this.saldo = this.saldo - valor;
             this.saldoInvestimento=this.saldoInvestimento+valor;
             return true;
         }else {
