@@ -38,6 +38,15 @@ public class PageContaMaster extends javax.swing.JInternalFrame {
         jButtonInvestimentos.setText("Investimentos");
 
         jButtonResgatar.setText("Resgatar");
+        jButtonResgatar.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                jButtonResgatarAncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
 
         jButtonInvestir.setText("Investir");
 
@@ -81,6 +90,10 @@ public class PageContaMaster extends javax.swing.JInternalFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButtonResgatarAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jButtonResgatarAncestorAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonResgatarAncestorAdded
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

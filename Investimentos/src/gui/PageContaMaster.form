@@ -77,6 +77,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Resgatar"/>
       </Properties>
+      <Events>
+        <EventHandler event="ancestorAdded" listener="javax.swing.event.AncestorListener" parameters="javax.swing.event.AncestorEvent" handler="jButtonResgatarAncestorAdded"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jButtonInvestir">
       <Properties>
